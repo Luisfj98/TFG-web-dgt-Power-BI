@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="shortcut icon" href="#" />
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../public/css/index.css">
+    <title>Embedded Power BI report</title>
+</head>
+
+<body onload="deshabilitaRetroceso()">
+    <header class="embed-container">
+        <p>Informe 1
+            <a href="/listadoInformes">
+                <button class="VolverListado">Volver al listado</button>
+            </a>
+            <a href="/logout">
+                <button class="logout">Logout</button>
+            </a>
+        </p>
+    </header>
+
+    <main class="row">
+        <section id="report-container" class="embed-container">
+        </section>
+
+        <section class="error-container">
+        </section>
+    </main>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/powerbi.min.js"></script>
+    <script src="../public/js/index.js"></script>
+
+    <script>
+        function deshabilitaRetroceso() {
+            window.location.hash = "no-back-button";
+            window.location.hash = "Again-No-back-button" //chrome
+            window.onhashchange = function () { window.location.hash = "no-back-button"; }
+        }
+    </script>
+
+</body>
+
+</html>
