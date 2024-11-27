@@ -1,0 +1,131 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background-image: url(https://motor.elpais.com/wp-content/uploads/2022/07/carreteras.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.wrapper {
+    max-width: 500px;
+    min-width: 350px;
+    height: 400px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    margin: 30px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 30px;
+    color: black;
+}
+
+.login {
+    padding: 20px 40px;
+}
+
+.label {
+    font-size: 18px;
+    margin: 5px 0px;
+    color: black;
+}
+
+.login input {
+    height: 40px;
+    width: 100%;
+    border-radius: 3px;
+    outline: none;
+    padding: 0 10px;
+    font-size: 18px;
+    border:  thin solid silver;
+}
+
+.login input:focus {
+    transition: .3s;
+    border: 1px solid #999999;
+}
+
+.login button {
+
+    margin-top: 45px;
+    height: 50px;
+    width: 100%;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    background-color: lightskyblue;
+    transition: .5s;
+}
+
+.login button:hover {
+    background-color: lightblue;
+}
+
+.dgt{
+    text-align: center;
+    margin-top: 15px;
+}
+
+.google {
+    align-items: center;
+    margin-top: 45px;
+    height: 50px;
+    width: 28%;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    border-radius: 5px;
+    background-color: lightgreen;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+.microsoft {
+    margin-top: 60px;
+    height: 50px;
+    width: 28%;
+    margin-left: 5px;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    border-radius: 5px;
+    background-color: lightskyblue;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+.forgot-pass {
+    margin-left: 60px;
+
+}
+
+.register-user {
+    margin-left: 5px;
+}
+
+.social {
+    margin-left: 6px;
+}
+
+.socialAlt {
+    margin-left: 82px;
+}
