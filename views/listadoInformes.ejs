@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../public/css/listadoInformes.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrar botones según cookie</title>
+    <style>
+        /* Ocultar los botones por defecto */
+        #informe1, #informe2 , #permisos{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Botones -->
+     <a href="/embed">
+        <button class="infor1" id="informe1">Informe 1</button>
+     </a>
+     <a href="/embed2">
+        <button class="infor2" id="informe2">Informe 2</button>
+     </a>
+     <a href="/logout">
+        <button class="sinPer" id="permisos">No tienes permisos. Volver al login</button>
+     </a>
+
+    <!-- Script para manejar cookies y mostrar los botones -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Función para leer una cookie por su nombre
+            function getCookie(name) {
+                let cookieArr = document.cookie.split(";");
+                for (let i = 0; i < cookieArr.length; i++) {
+                    let cookiePair = cookieArr[i].split("=");
+                    if (name === cookiePair[0].trim()) {
+                        return decodeURIComponent(cookiePair[1]);
+                    }
+                }
+                return null;
+            }
+
+            // Leer la cookie 'Rol'
+            const rol = getCookie('userRole');
+
+            // Mostrar un botón u otro dependiendo del valor de la cookie
+            if (rol === '0') {
+                document.getElementById('permisos').style.display = 'inline-block';
+            }else if (rol === '1') {
+                document.getElementById('informe1').style.display = 'inline-block';
+            } else if (rol === '2') {
+                document.getElementById('informe2').style.display = 'inline-block';
+            }else if(rol === '3') {
+                document.getElementById('informe1').style.display = 'inline-block';
+                document.getElementById('informe2').style.display = 'inline-block';
+            }
+        });
+    </script>
+</body>
+</html>
