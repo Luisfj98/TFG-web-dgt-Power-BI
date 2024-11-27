@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../public/css/login.css">
+    <meta name="google-signin-client_id"
+        content="332899807819-agk3i5n398a88202l2q03nq081p6r1gd.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+</head>
+
+<body onload="deshabilitaRetroceso()">
+
+    <div class="wrapper">
+
+        <div class="dgt">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/DGT_logo.svg/1280px-DGT_logo.svg.png"
+                width="110px">
+        </div>
+        <form action="/auth" method="POST">
+            <div class="login">
+                <label for="userLogin">Email</label><br>
+                <input type="email" name="emailLogin" required><br><br>
+                <label for="passLogin">Contraseña</label><br>
+                <input type="password" name="passLogin" required>
+                <button>Login</button><br><br>
+                
+                <a class="register-user" href="/register">Registrarse</a>
+                <a class="forgot-pass" href="/forgot-password">Contraseña olvidada</a><br><br><br>
+            </div>
+        </form>
+    </div>
+
+    </div>
+
+    <script>
+        function deshabilitaRetroceso() {
+            window.location.hash = "no-back-button";
+            window.location.hash = "Again-No-back-button" //chrome
+            window.onhashchange = function () { window.location.hash = "no-back-button"; }
+        }
+    </script>
+
+</body>
+
+</html>
