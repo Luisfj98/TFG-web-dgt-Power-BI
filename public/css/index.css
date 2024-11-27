@@ -1,0 +1,80 @@
+header {
+    background-color: #007FFF;
+    height: 68px;
+    width: 100%;
+}
+
+header > p {
+    color: #FFFFFF;
+    font: bold 1.6em "segoe ui", arial, sans-serif;
+    margin-left: 20px;
+    padding-top: 15px;
+}
+
+main {
+    margin: 0 auto;
+    width: 100%;
+}
+
+section#text-container > div > p {
+    font: 1.2em "segoe ui", arial, sans-serif;
+}
+
+section#report-container {
+    height: calc(0.5625 * 82vw); /* 16:9 aspect ratio */
+    width: 98vw;
+    margin: auto;
+    margin-top: 5px;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 575px) {
+    section#report-container {
+        height: calc(0.5625 * 100vw); /* 16:9 aspect ratio */
+    }
+}
+
+footer > p {
+    font: 1em "segoe ui", arial, sans-serif;
+}
+
+iframe {
+    justify-content: center;
+    border: none;
+    height: calc(0.5625 * 78vw); /* 16:9 aspect ratio */
+    width: 100%;
+    margin: auto;
+    margin-left: 25px;
+    margin-top: 5px;
+}
+
+.logout {
+    font: bold;
+    color: white;
+    background-color: red;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline;
+    justify-content: flex-end;
+    position: absolute;
+    text-decoration: none;
+    left: 92%;
+}
+
+.VolverListado {
+    font: bold;
+    color: white;
+    background-color: green;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline;
+    justify-content: flex-end;
+    position: absolute;
+    text-decoration: none;
+    left: 80%;
+}
+
+.logout button:hover {
+
+    background-color: red;
+}
