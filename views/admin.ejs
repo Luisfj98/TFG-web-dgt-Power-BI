@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../public/css/admin.css">
+    <meta name="google-signin-client_id"
+        content="332899807819-agk3i5n398a88202l2q03nq081p6r1gd.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+</head>
+
+<body onload="deshabilitaRetroceso()">
+
+    <div class="wrapper">
+
+        <h1>Administración de permisos</h1>
+        <form action="/admin" method="POST">
+            <div class="admin">
+                <label for="userAdmin">Email</label><br>
+                <input type="email" name="userEmail" required><br><br>
+                <select id="informes" name="informes">
+                    <option value="todos">Mostrar todos</option>
+                    <option value="informe1">Informe1</option>
+                    <option value="informe2">Informe2</option>
+                </select>
+                <button>Dar permisos</button>
+            </div>
+        </form>
+
+        <a href="/logout">
+            <button class="volverLogin">Volver al Login</button>
+        </a>
+    </div>
+
+    </div>
+
+    <script>
+        function deshabilitaRetroceso() {
+            window.location.hash = "no-back-button";
+            window.location.hash = "Again-No-back-button" //chrome
+            window.onhashchange = function () { window.location.hash = "no-back-button"; }
+        }
+    </script>
+
+</body>
+
+</html>
