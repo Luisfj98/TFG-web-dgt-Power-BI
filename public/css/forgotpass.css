@@ -1,0 +1,94 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background-image: url(https://motor.elpais.com/wp-content/uploads/2022/07/carreteras.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.wrapper {
+    max-width: 300px;
+    min-width: 350px;
+    height: 400px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    margin: 30px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 10px;
+    color: black;
+}
+
+.register {
+    padding: 30px 40px;
+}
+
+.label {
+    font-size: 18px;
+    margin: 5px 0px;
+    color: black;
+}
+
+.register input {
+    height: 40px;
+    width: 100%;
+    border-radius: 5px;
+    outline: none;
+    padding: 0 10px;
+    font-size: 18px;
+    border:  thin solid silver;
+}
+
+.register input:focus {
+    transition: .3s;
+    border: 1px solid #999999;
+}
+
+.register button {
+
+    margin-top: 20px;
+    height: 50px;
+    width: 100%;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    background-color: lightskyblue;
+    transition: .5s;
+}
+
+.register button:hover {
+    background-color: lightblue;
+}
+
+.backLogin {
+    margin-top: 20px;
+    height: 50px;
+    width: 100%;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    background-color: lightgreen;
+    transition: .5s;
+}
