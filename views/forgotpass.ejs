@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../public/css/forgotpass.css">
+</head>
+
+<body onload="deshabilitaRetroceso()">
+
+    <div class="wrapper">
+        <h1>Contraseña Olvidada</h1>
+        <form action="/forgot-password" method="POST">
+            <div class="register">
+                <label for="email">Email</label><br>
+                <input id="email" type="email" name="email" required><br><br>
+                <label for="pass">Contraseña</label>
+                <input id="contraseña" type="password" name="pass" required><br><br>
+                <label for="pass">Confirmar Contraseña</label>
+                <input id="confirmarContraseña" type="password" name="confirmPass" required><br>
+                <button>Cambiar Contraseña</button>
+            </div>
+        </form>
+        <a href="/">
+            <button class="backLogin">Volver al Login</button>
+        </a>
+    </div>
+
+    </div>
+
+    <script>
+        function deshabilitaRetroceso() {
+            window.location.hash = "no-back-button";
+            window.location.hash = "Again-No-back-button" //chrome
+            window.onhashchange = function () { window.location.hash = "no-back-button"; }
+        }
+    </script>
+</body>
+
+</html>
