@@ -1,0 +1,52 @@
+body {
+    height: 97vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background-image: url(https://motor.elpais.com/wp-content/uploads/2022/07/carreteras.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.infor1 {
+    width: 300px;
+    height: 150px;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 0 20px;
+    transition: transform 0.3s ease;
+    background-color: lightblue;
+}
+
+.infor2 {
+    width: 300px;
+    height: 150px;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 0 20px;
+    transition: transform 0.3s ease;
+    background-color: lightgreen;
+}
+
+.sinPer {
+    width: 400px;
+    height: 150px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 0 20px;
+    transition: transform 0.3s ease;
+    background-color: red;
+}
