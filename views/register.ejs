@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../public/css/register.css">
+</head>
+
+<body onload="deshabilitaRetroceso()">
+
+    <div class="wrapper">
+        <h1>Formulario de registro</h1>
+        <form action="/register" method="POST">
+            <div class="register">
+                <label for="user">Usuario</label><br>
+                <input class="cajasTexto" id="Usuario" type="text" name="user" required><br><br>
+                <label for="name">Nombre</label><br>
+                <input class="cajasTexto" id="Nombre" type="text" name="name" required><br><br>
+                <label for="email">Email</label><br>
+                <input class="cajasTexto" id="email" type="email" name="email" required><br><br>
+                <label for="pass">Contraseña</label>
+                <input class="cajasTexto" id="contraseña" type="password" name="pass" required><br>
+                <button id="envio" disabled>Registrar</button>
+            </div>
+        </form>
+        <a href="/">
+            <button class="backLogin">Volver al Login</button>
+        </a>
+    </div>
+
+    </div>
+
+    <script>
+        let boton1 = document.getElementById("envio")
+        let cajasTexto = document.querySelectorAll(".cajasTexto")
+
+        cajasTexto[1].addEventListener("keyup", () => {
+            if (cajasTexto[0].value != "" && cajasTexto[1].value != "") {
+                document.getElementById("envio").disabled = false
+            } else {
+                document.getElementById("envio").disabled = true
+            }
+        })
+
+        function deshabilitaRetroceso() {
+            window.location.hash = "no-back-button";
+            window.location.hash = "Again-No-back-button" //chrome
+            window.onhashchange = function () { window.location.hash = "no-back-button"; }
+        }
+    </script>
+</body>
+
+</html>
